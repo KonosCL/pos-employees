@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	
+	<t t-extend="Chrome">
+	    <t t-jquery="div.pos-branding" t-operation="append">
+            <span class="placeholder-SalesPersonWidget"></span>
+	    </t>
+	</t>
+
+    <t t-name="SalesPersonWidget">
+        <span class="pos_cashier">SalesPerson:
+            <t t-esc="widget.get_salesperson_name()" />
+        </span>
+    </t>
+    
+</templates>
