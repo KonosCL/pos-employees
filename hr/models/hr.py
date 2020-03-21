@@ -7,6 +7,8 @@ from odoo import api, fields, models
 from odoo import tools, _
 from odoo.exceptions import ValidationError, AccessError
 from odoo.modules.module import get_module_resource
+from random import choice
+from string import digits
 
 _logger = logging.getLogger(__name__)
 
@@ -198,6 +200,16 @@ class Employee(models.Model):
     # misc
     notes = fields.Text('Notes')
     color = fields.Integer('Color Index', default=0)
+    barcode = fields.Char(string="Badge ID", help="ID used for employee identification.", copy=False)
+    pin = fields.Char(string="PIN", help="PIN used to Check In/Out in Kiosk Mode (if enabled in Configuration).", copy=False)
+
+    _sql_constraints = [('barcode_uniq', 'unique (barcode)', "The Badge ID must be unique, this one is already assigned to another employee.")]
+
+    @api.constrains('pin')
+    def _verify_pin(self):
+        for employee in self:
+            if employee.pin and not employee.pin.isdigit():
+                raise ValidationError(_("The PIN must be a sequence of digits."))
 
     @api.constrains('parent_id')
     def _check_parent_id(self):
@@ -279,6 +291,10 @@ class Employee(models.Model):
         resources = self.mapped('resource_id')
         super(Employee, self).unlink()
         return resources.unlink()
+
+    @api.multi
+    def generate_random_barcode(self):
+        for i in self: i.barcode = "".join(choice(digits) for i in range(8))
 
     @api.depends('address_home_id.parent_id')
     def _compute_is_address_home_a_company(self):
