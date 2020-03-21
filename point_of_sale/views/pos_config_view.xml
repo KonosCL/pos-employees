@@ -58,6 +58,7 @@
                           <label for="module_pos_restaurant"/>
                           <button string="Save" type="object" name="execute" class="oe_highlight" id="btn_use_pos_restaurant" attrs="{'invisible': [('module_pos_restaurant','=',False)]}" />
                         </div>
+                        </div>
                         <div class="col-12 col-lg-6 o_setting_box"
                              title="Employees can scan their badge or enter a PIN to log in to a PoS session. These credentials are configurable in the *HR Settings* tab of the employee form.">
                             <div class="o_setting_left_pane">
@@ -72,7 +73,6 @@
                             </div>
                         </div>
                       </div>
-                    </div>
                     <h2 name="order">Order Interface</h2>
                     <div class="row mt16 o_settings_container">
                         <div id="category_reference" class="col-12 col-lg-6 o_setting_box">

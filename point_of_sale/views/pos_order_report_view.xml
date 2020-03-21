@@ -36,7 +36,6 @@
                     <filter string="Not Invoiced" name="not_invoiced" domain="[('state','=',('paid'))]"/>
                     <field name="config_id"/>
                     <field name="partner_id"/>
-                    <field name="user_id"/>
                     <field name="product_id"/>
                     <field name="product_categ_id"/>
                     <group expand="1" string="Group By">
