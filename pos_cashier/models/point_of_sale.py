@@ -18,5 +18,8 @@ class PosOrder(models.Model):
     @api.model
     def _order_fields(self, ui_order):
         order_fields = super(PosOrder, self)._order_fields(ui_order)
-        order_fields['salesperson'] = salesmandetails['name']
+        try:
+            order_fields['salesperson'] = salesmandetails['name']
+        except:
+            order_fields['salesperson'] = ui_order['user_id'] or False
         return order_fields
