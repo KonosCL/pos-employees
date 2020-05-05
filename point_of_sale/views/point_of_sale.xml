@@ -9,6 +9,7 @@
             <link rel="stylesheet" type="text/less" href="/web/static/src/scss/fontawesome_overriden.scss"/>
 
             <script type="text/javascript" src="/point_of_sale/static/lib/waitfont.js"></script>
+            <script type="text/javascript" src="/point_of_sale/static/lib/sha1.js"></script>
             <script type="text/javascript" src="/point_of_sale/static/src/js/main.js"></script>
             <script type="text/javascript" src="/point_of_sale/static/src/js/db.js"></script>
             <script type="text/javascript" src="/point_of_sale/static/src/js/models.js"></script>
@@ -80,11 +81,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="pos-payment_info">
                     <div class="pos-adv" style="background-image:url(http://placehold.it/300x350?text=ADV);"></div>
                     <div class="pos-company_logo"/>
-            
+
                     <div class="pos-payment_info_details">
                         <div class="pos-total">
                             <div>
@@ -114,7 +115,7 @@
                     </div>
                 </div>
             </div>
-        </t>                    
+        </t>
     </template>
 
 </odoo>
