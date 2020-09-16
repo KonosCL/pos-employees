@@ -1,21 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* pos_hr
+#	* pos_hr
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0+e-20191022\n"
+"Project-Id-Version: Odoo Server 12.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-21 16:07+0000\n"
-"PO-Revision-Date: 2020-03-21 13:08-0300\n"
-"Last-Translator: Nelson Ramírez  <nramirez@konos.cl>\n"
+"POT-Creation-Date: 2020-09-14 21:09+0000\n"
+"PO-Revision-Date: 2020-09-14 21:09+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: es\n"
-"X-Generator: Poedit 2.3\n"
 
 #. module: pos_hr
 #: model_terms:ir.ui.view,arch_db:pos_hr.pos_config_form_view_inherit
@@ -30,12 +28,35 @@ msgid "Cashier"
 msgstr "Cajero"
 
 #. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/js/chrome.js:30
+#: code:addons/pos_hr/static/src/js/screens.js:69
+#, python-format
+msgid "Change Cashier"
+msgstr "Cambiar Cajero"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/xml/pos.xml:19
+#, python-format
+msgid "Close session"
+msgstr "Cerrar Sesión"
+
+#. module: pos_hr
 #: model:ir.model,name:pos_hr.model_hr_employee
 #: model:ir.model.fields,field_description:pos_hr.field_pos_order__employee_id
 #: model:ir.model.fields,field_description:pos_hr.field_report_pos_order__employee_id
 #: model_terms:ir.ui.view,arch_db:pos_hr.view_report_pos_order_search_inherit
 msgid "Employee"
 msgstr "Empleado"
+
+#. module: pos_hr
+#: code:addons/pos_hr/models/hr_employee.py:34
+#, python-format
+msgid "Employee: %s - PoS Config(s): %s \n"
+""
+msgstr "Empleado: %s - Configuración del POS: %s \n"
+""
 
 #. module: pos_hr
 #: model:ir.model.fields,field_description:pos_hr.field_pos_config__employee_ids
@@ -48,9 +69,37 @@ msgid "If left empty, all employees can log in to the PoS session"
 msgstr "Si se deja vacío, todos los empleados pueden iniciar sesión en la sesión de PoS"
 
 #. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/js/gui.js:60
+#, python-format
+msgid "Incorrect Password"
+msgstr "Contraseña incorrecta"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/js/chrome.js:96
+#, python-format
+msgid "Lock"
+msgstr "Bloquear"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/xml/pos.xml:6
+#, python-format
+msgid "Log in to"
+msgstr "Iniciar sesión"
+
+#. module: pos_hr
 #: model_terms:ir.ui.view,arch_db:pos_hr.pos_config_form_view_inherit
 msgid "Only users with Manager access rights for PoS app can modify the product prices on orders."
 msgstr "Solo los usuarios con derechos de acceso de administrador pueden modificar los precios de los productos en los pedidos."
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/js/gui.js:57
+#, python-format
+msgid "Password ?"
+msgstr "Contraseña ?"
 
 #. module: pos_hr
 #: model:ir.model.fields,help:pos_hr.field_pos_order__employee_id
@@ -60,12 +109,12 @@ msgstr "Persona que utiliza la caja registradora. Puede ser un sustituto, un est
 #. module: pos_hr
 #: model:ir.model,name:pos_hr.model_pos_config
 msgid "Point of Sale Configuration"
-msgstr "Configuración del TPV"
+msgstr "Configuración del POS"
 
 #. module: pos_hr
 #: model:ir.model,name:pos_hr.model_pos_order
 msgid "Point of Sale Orders"
-msgstr "Pedidos del TPV"
+msgstr "Pedidos del POS"
 
 #. module: pos_hr
 #: model:ir.model,name:pos_hr.model_report_pos_order
@@ -81,3 +130,40 @@ msgstr "Control de precios"
 #: model_terms:ir.ui.view,arch_db:pos_hr.pos_config_form_view_inherit
 msgid "Restrict price modification to managers"
 msgstr "Restringir la modificación de los precios a los responsables"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/xml/pos.xml:10
+#, python-format
+msgid "Scan your badge"
+msgstr "Escaneé su identificación"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/xml/pos.xml:14
+#, python-format
+msgid "Select Cashier"
+msgstr "Seleccionar Cajero"
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/js/gui.js:32
+#, python-format
+msgid "Select User"
+msgstr "Seleccionr Usuario"
+
+#. module: pos_hr
+#: code:addons/pos_hr/models/hr_employee.py:30
+#, python-format
+msgid "You cannot delete an employee that may be used in an active PoS session, close the session(s) first: \n"
+""
+msgstr "Usted no puede eliminar a un empleado que se encuentra activo en una sesión del POS, primero cierre la sesión: \n"
+""
+
+#. module: pos_hr
+#. openerp-web
+#: code:addons/pos_hr/static/src/xml/pos.xml:12
+#, python-format
+msgid "or"
+msgstr "o"
+
