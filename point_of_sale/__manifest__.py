@@ -3,10 +3,10 @@
 
 {
     'name': 'Point of Sale',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Point Of Sale',
     'sequence': 20,
-    'summary': 'Tablet POS: shops and restaurants',
+    'summary': 'Tablet POS: shops and restaurants (custom)',
     'description': "",
     'depends': ['stock_account', 'barcodes', 'web_editor', 'digest'],
     'data': [
